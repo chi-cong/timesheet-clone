@@ -1,0 +1,12 @@
+:host {
+  height: 100%;
+}
+.form-wrapper {
+  height: 100%;
+}
+
+// this was intentionally written out of form-wrapper class
+mat-form-field {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--padding1);
+  padding-bottom: var(--padding2);
+  box-sizing: border-box;
+  border-bottom: solid 1px var(--lightGray);
+  font-size: var(--titleSize1);
+  color: var(--lightBlack);
+  height: 2rem;
+}

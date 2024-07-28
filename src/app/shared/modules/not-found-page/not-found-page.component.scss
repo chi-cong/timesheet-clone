@@ -1,0 +1,19 @@
+:host {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cyan500);
+  text-transform: capitalize;
+}
+h1 {
+  font-size: var(--titleSize2);
+  color: var(--pureWhite);
+}
+p {
+  font-size: var(--titleSize1);
+  color: var(--pureWhite);
+  cursor: pointer;
+}

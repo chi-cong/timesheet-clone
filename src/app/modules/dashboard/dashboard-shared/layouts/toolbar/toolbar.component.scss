@@ -1,0 +1,49 @@
+.toolbar-placeholder {
+  height: var(--toolbarHeight);
+}
+mat-toolbar {
+  z-index: var(--highestZ-indexValue);
+  height: var(--toolbarHeight);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .toolbar-start {
+    display: flex;
+    align-items: center;
+    gap: var(--gap0-5);
+    text-transform: capitalize;
+
+    .menu-icon {
+      display: none;
+      animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      cursor: pointer;
+      font-size: var(--titleSize1-25);
+    }
+    img {
+      height: var(--toolbarIHeight);
+      width: var(--toolbarIWidth2);
+    }
+  }
+  .toolbar-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    gap: var(--gap0-5);
+    .tool-icon {
+      cursor: pointer;
+      font-size: var(--titleSize1-25);
+    }
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  mat-toolbar {
+    .toolbar-start {
+      .menu-icon {
+        display: block;
+      }
+    }
+  }
+}

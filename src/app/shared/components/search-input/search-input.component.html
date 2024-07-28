@@ -1,0 +1,13 @@
+<mat-form-field appearence="'standard'">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [type]="'text'"
+    [(ngModel)]="inputString"
+    (keyup.enter)="onEnter()"
+    (input)="onChange()"
+  />
+  <div class="prefix-container" matPrefix>
+    <mat-icon>search</mat-icon>
+  </div>
+</mat-form-field>

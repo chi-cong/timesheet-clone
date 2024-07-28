@@ -1,0 +1,20 @@
+.sidenav-container {
+  position: fixed;
+  z-index: var(--highestZ-indexValue);
+  width: var(--sidebarWidth);
+  height: calc(100vh - var(--toolbarHeight));
+  transition: all 500ms ease;
+  .sidenav {
+    border: 0;
+    transition: all 500ms ease !important;
+  }
+}
+.hide {
+  transform: translateX(-18.75rem);
+}
+
+@media screen and (max-width: 1170px) {
+  .sidenav-placeholder {
+    display: none;
+  }
+}

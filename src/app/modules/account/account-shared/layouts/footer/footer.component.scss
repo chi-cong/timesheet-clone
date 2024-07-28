@@ -1,0 +1,11 @@
+footer {
+  width: 100%;
+  color: var(--pureWhite);
+  text-align: center;
+  .info {
+    font-size: var(--defaultSize);
+    span {
+      font-weight: 700;
+    }
+  }
+}

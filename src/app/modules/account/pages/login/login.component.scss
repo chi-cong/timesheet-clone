@@ -1,0 +1,21 @@
+:host {
+  width: 100%;
+}
+
+.login {
+  height: auto;
+  background: var(--pureWhite);
+  box-shadow: var(--lightShadowBox);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--gray);
+  .title {
+    font-size: var(--titleSize1);
+    font-weight: var(--titleFontWeight);
+    text-transform: capitalize;
+  }
+}

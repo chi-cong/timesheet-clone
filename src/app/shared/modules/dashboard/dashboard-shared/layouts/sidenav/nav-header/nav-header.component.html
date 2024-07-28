@@ -1,0 +1,25 @@
+<div class="nav-header">
+  <img [attr.src]="avatarPath" alt="avater" title="Update Avatar" />
+  <div class="user-detail">
+    <div class="first-row">
+      <p class="name">{{ name }} {{ surname }}</p>
+    </div>
+    <div class="second-row">
+      <p class="email">{{ email }}</p>
+    </div>
+  </div>
+  <button
+    mat-icon-button
+    title="More"
+    class="expand-btn"
+    [matMenuTriggerFor]="userMenu"
+  >
+    <mat-icon>expand_more</mat-icon>
+  </button>
+  <mat-menu #userMenu>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</div>

@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding2);
+  --filterItemHeight: 3.125rem;
+}
+.trigger-adding-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--filterItemHeight);
+  padding-left: var(--padding1);
+  padding-right: var(--padding1);
+  color: var(--pureWhite);
+  font: var(--defaultSize);
+  text-align: center;
+}
+.select-box-filter {
+  height: var(--filterTiltle);
+}
+.search-box {
+  width: 50%;
+}
+
+@media screen and (max-width: 1170px) {
+  :host {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 550px) {
+  .search-box {
+    width: 100%;
+  }
+}

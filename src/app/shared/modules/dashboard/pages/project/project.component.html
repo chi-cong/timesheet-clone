@@ -1,0 +1,10 @@
+<div class="page-section">
+  <section class="content-section">
+    <div *ngIf="showProject" class="project-displayer">
+      <app-page-title [pageName]="'Manage Projects'"></app-page-title>
+      <app-project-filter></app-project-filter>
+      <app-project-manager></app-project-manager>
+    </div>
+    <router-outlet *ngIf="!showProject"></router-outlet>
+  </section>
+</div>

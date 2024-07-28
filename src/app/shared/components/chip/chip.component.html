@@ -1,0 +1,4 @@
+<mat-chip [selected]="color ? true : false" [color]="color">
+  <img *ngIf="avatarPath" [attr.src]="avatarPath" alt="avatar" />
+  {{ content }}
+</mat-chip>

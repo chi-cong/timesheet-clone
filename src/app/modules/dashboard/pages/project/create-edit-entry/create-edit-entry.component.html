@@ -1,0 +1,44 @@
+<app-page-title
+  [pageName]="'Create Project'"
+  [hasMenu]="false"
+></app-page-title>
+<mat-stepper (selectionChange)="selectionChange($event)">
+  <form action="" (submit)="submit($event)" [formGroup]="fg">
+    <mat-step>
+      <ng-template matStepLabel>Fill out infomations</ng-template>
+      <ng-template matStepContent>
+        <router-outlet *ngIf="0 === selectedStep"></router-outlet>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Choose team member</ng-template>
+      <ng-template matStepContent>
+        <router-outlet *ngIf="1 === selectedStep"></router-outlet>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Select task</ng-template>
+      <ng-template matStepContent>
+        <router-outlet *ngIf="2 === selectedStep"></router-outlet>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Notificate to Komu</ng-template>
+      <ng-template matStepContent>
+        <router-outlet *ngIf="3 === selectedStep"></router-outlet>
+      </ng-template>
+    </mat-step>
+  </form>
+</mat-stepper>
+<div class="button-container">
+  <app-confirm-btn
+    (clickEvent)="backToPreviousPage()"
+    [color]="'primary'"
+    [content]="'Cancel'"
+  ></app-confirm-btn>
+  <app-confirm-btn
+    (clickEvent)="submit($event)"
+    [color]="'accent'"
+    [content]="'Save'"
+  ></app-confirm-btn>
+</div>

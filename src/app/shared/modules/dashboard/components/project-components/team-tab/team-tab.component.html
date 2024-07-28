@@ -1,0 +1,69 @@
+<mat-expansion-panel class="expansion-panel team-panel">
+  <mat-expansion-panel-header>
+    <mat-panel-title>Team</mat-panel-title>
+  </mat-expansion-panel-header>
+  <ng-template matExpansionPanelContent>
+    <div class="content">
+      <div class="filter">
+        <app-check-box [label]="'Show deactive memeber'"></app-check-box>
+        <app-search-input [label]="'Search by name, email'"></app-search-input>
+      </div>
+      <app-member-card
+        *ngFor="let user of selectedUser"
+        [id]="user.id"
+        [name]="user.name"
+        [email]="user.emailAddress"
+        [userType]="user.type | userType"
+        [userLvl]="user.level"
+        [prefixIcon]="'close'"
+        [imgSrc]="user.avatarFullPath"
+        [positions]="memberPositions"
+        (btnEvent)="removeSelectedMember($event)"
+      ></app-member-card>
+    </div>
+  </ng-template>
+</mat-expansion-panel>
+
+<mat-card class="panel-card unselected-member-panel">
+  <div class="content-container">
+    <app-page-title
+      [pageName]="'Select member'"
+      [hasMenu]="false"
+    ></app-page-title>
+    <div class="content">
+      <div class="filter">
+        <app-select-box
+          class="select-container"
+          (emitValue)="branchFilter($event)"
+          [label]="'Branch'"
+          [itemList]="branches"
+        ></app-select-box>
+        <app-select-box
+          class="select-container"
+          (emitValue)="branchFilter($event)"
+          [label]="'type'"
+          [itemList]="userTypes"
+        ></app-select-box>
+        <app-search-input
+          class="search-box"
+          (typeEvent)="searchUser($event)"
+          [label]="'Search by name, email'"
+        ></app-search-input>
+      </div>
+      <div class="member-container">
+        <app-member-card
+          *ngFor="let user of displayedUser"
+          [id]="user.id"
+          [name]="user.name"
+          [email]="user.emailAddress"
+          [userType]="user.type | userType"
+          [userLvl]="user.level"
+          [prefixIcon]="'chevron_left'"
+          [imgSrc]="user.avatarFullPath"
+          (btnEvent)="selectMember($event)"
+          (itemEvent)="selectMember($event)"
+        ></app-member-card>
+      </div>
+    </div>
+  </div>
+</mat-card>

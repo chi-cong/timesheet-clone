@@ -1,0 +1,5 @@
+<div class="screen-width-listener" (window:resize)="onResize($event)"></div>
+<app-toolbar></app-toolbar>
+<app-sidenav></app-sidenav>
+<app-overlay class="overlay" (groundClickEvent)="closeSidebar()"></app-overlay>
+<router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+<div class="client-project-container" *ngIf="projectList">
+  <div class="client-projects" *ngFor="let projects of projectList">
+    <div class="client-name">{{ projects[0].customerName }}</div>
+    <app-client-project
+      *ngFor="let project of projects"
+      [name]="project.name"
+      [pms]="project.pms"
+      [activeMember]="project.activeMember"
+      [type]="project.projectType | projectType"
+      [startDate]="project.timeStart | date: 'shortDate':'UTC'"
+      [endDate]="project.timeEnd | date: 'shortDate':'UTC'"
+      [id]="project.id"
+      [status] = "project.status"
+    ></app-client-project>
+  </div>
+</div>
+<mat-spinner *ngIf="!projectList"></mat-spinner>

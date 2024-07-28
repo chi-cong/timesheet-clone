@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  color: var(--pureWhite);
+  .logo {
+    font-size: var(--titleSize2);
+    text-transform: capitalize;
+  }
+}

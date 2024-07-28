@@ -1,0 +1,81 @@
+<div action="" class="general-form">
+  <div class="form-row">
+    <h4 class="input-label">Client</h4>
+    <app-select-box
+      [itemList]="clientOptions"
+      [fg]="fg"
+      [controlName]="'customerId'"
+    ></app-select-box>
+    <button
+      mat-flat-button
+      (click)="openNewClientForm()"
+      color="primary"
+      class="adding-btn"
+    >
+      <mat-icon>add</mat-icon>
+      <span>New Client</span>
+    </button>
+  </div>
+  <div class="form-row">
+    <h4 class="input-label">project name</h4>
+    <app-form-input
+      [fg]="fg"
+      [label]="'Project name'"
+      [controlName]="'name'"
+      class="medium-form-input"
+      (validationTracker)="updateValidationState()"
+    ></app-form-input>
+  </div>
+  <div class="form-row">
+    <h4 class="input-label">Project code</h4>
+    <app-form-input
+      [fg]="fg"
+      [label]="'Project code'"
+      [controlName]="'code'"
+      class="small-form-input"
+      (validationTracker)="updateValidationState()"
+    ></app-form-input>
+  </div>
+  <div class="form-row">
+    <h4 class="input-label">date</h4>
+    <div class="small-container">
+      <app-date-picker
+        [fg]="fg"
+        [controlName]="'timeStart'"
+        [label]="'Start at'"
+      ></app-date-picker>
+      <p>to</p>
+      <app-date-picker
+        [fg]="fg"
+        [controlName]="'timeEnd'"
+        [label]="'End at'"
+      ></app-date-picker>
+    </div>
+  </div>
+  <div class="form-row">
+    <h4 class="input-label">Note</h4>
+    <app-form-input
+      [fg]="fg"
+      [controlName]="'note'"
+      [isTextArea]="true"
+    ></app-form-input>
+  </div>
+  <div class="form-row">
+    <h4 class="input-label">All user</h4>
+    <app-check-box
+      [fg]="fg"
+      [label]="
+        'Auto add user as a member of this project when creating new user'
+      "
+      [controlName]="'isAllUserBelongTo'"
+    ></app-check-box>
+  </div>
+  <div class="form-row">
+    <h4 class="input-label">Project Type</h4>
+    <app-toggle-btn-group
+      [fg]="fg"
+      [controlName]="'projectType'"
+      [btnList]="projectTypeList"
+    ></app-toggle-btn-group>
+  </div>
+</div>

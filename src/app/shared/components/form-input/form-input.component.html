@@ -1,0 +1,29 @@
+<mat-icon aria-hidden="false" arial-label="input icon" *ngIf="iconName">{{
+  iconName
+}}</mat-icon>
+
+<div class="form-field" [formGroup]="fg">
+  <mat-form-field [appearance]="appearance">
+    <mat-label>{{ label }}</mat-label>
+    <input
+      matInput
+      type="{{ inputType }}"
+      [attr.placeholder]="placeholder"
+      [attr.value]="value"
+      formControlName="{{ controlName }}"
+      (input)="onInput()"
+      [class.noIconInput]="!iconName"
+      *ngIf="!isTextArea"
+    />
+    <textarea
+      matInput
+      type="{{ inputType }}"
+      [attr.placeholder]="placeholder"
+      [attr.value]="value"
+      formControlName="{{ controlName }}"
+      (input)="onInput()"
+      [class.noIconInput]="!iconName"
+      *ngIf="isTextArea"
+    ></textarea>
+  </mat-form-field>
+</div>

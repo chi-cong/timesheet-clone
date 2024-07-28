@@ -1,0 +1,20 @@
+<button
+  mat-flat-button
+  (click)="openAddingForm()"
+  color="primary"
+  class="trigger-adding-btn"
+>
+  <mat-icon>add</mat-icon>
+  <span>New Project</span>
+</button>
+<app-select-box
+  class="select-box-filter"
+  [itemList]="selectBoxOptions"
+  [appearance]="'standard'"
+  (emitValue)="selectBoxValueChange($event)"
+></app-select-box>
+<app-search-input
+  [label]="'Search by client or project name'"
+  class="search-box"
+  (enterEvent)="selectBoxValueChange($event)"
+></app-search-input>

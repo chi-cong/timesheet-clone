@@ -1,0 +1,28 @@
+<h3 class="title">log in</h3>
+<form action="" class="login-form" (submit)="submit($event)">
+  <app-form-input
+    [iconName]="'person'"
+    [appearance]="'legacy'"
+    [inputType]="'text'"
+    [label]="'user name or email'"
+    [fg]="fg"
+    [controlName]="'userNameOrEmailAddress'"
+    (validationTracker)="updateValidationStatus()"
+  ></app-form-input>
+  <app-form-input
+    [iconName]="'lock'"
+    [appearance]="'legacy'"
+    [inputType]="'password'"
+    [label]="'password'"
+    [fg]="fg"
+    [controlName]="'password'"
+    (validationTracker)="updateValidationStatus()"
+  ></app-form-input>
+  <div class="form-bottom">
+    <app-check-box [fg]="fg" [controlName]="'rememberClient'"></app-check-box>
+    <app-confirm-btn
+      [disabilityStatus]="validationState"
+      [content]="'Log in'"
+    ></app-confirm-btn>
+  </div>
+</form>

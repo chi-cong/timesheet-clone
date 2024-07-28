@@ -1,0 +1,54 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 80vh;
+  padding: var(--padding1);
+  box-sizing: border-box;
+}
+.team-panel {
+  width: 59%;
+}
+.unselected-member-panel {
+  width: 40%;
+  .content-container {
+    width: 100%;
+  }
+}
+.panel-card {
+  height: 70vh;
+  .content-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap1);
+  height: 100%;
+  width: 100%;
+  .filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap1);
+    width: 100%;
+    .select-container {
+      width: 20%;
+    }
+    .search-box {
+      width: 50%;
+    }
+  }
+  .member-container {
+    height: 70%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+}

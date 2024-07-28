@@ -1,0 +1,112 @@
+:host {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--transparentBackground);
+  z-index: 999;
+}
+.err-mess-box {
+  background: var(--pureWhite);
+  width: var(--modalOriginalSize);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap1);
+  border-radius: var(--roundedAngleBorder);
+  padding: var(--padding1);
+  animation: showup 300ms;
+  .modal-head {
+    width: 100%;
+    .err-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 1.25rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: var(--mediumSquare);
+      height: var(--mediumSquare);
+      border: solid 4px var(--lightRed2);
+      border-radius: var(--circleBorder);
+      position: relative;
+      .rotated-bar {
+        position: absolute;
+        width: 60%;
+        height: 3px;
+        border: solid 1px var(--lightRed2);
+        border-radius: var(--roundedAngleBorder);
+        background: var(--lightRed2);
+      }
+      .rotated-left {
+        transform: rotate(-45deg);
+      }
+      .rotated-right {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .err-title {
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: var(--titleSize1-5);
+    color: var(--rgbBluredBlack);
+    font-weight: var(--lightTitleFontWeight);
+  }
+  .err-content {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--default);
+    color: var(--rgbBluredBlack);
+    text-align: center;
+  }
+  .modal-foot {
+    width: 100%;
+    height: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .err-btn {
+      background: var(--cyan500);
+      color: var(--pureWhite);
+      border: solid 1px var(--cyan500);
+      border-radius: var(--roundedAngleBorder);
+      font-size: 0.875rem;
+      text-align: center;
+      padding: 0.625rem 1.5rem;
+      font-weight: var(--lightTitleFontWeight);
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .err-mess-box {
+    width: calc(100vw - 3.5rem);
+  }
+}
+@keyframes showup {
+  0% {
+    background: var(--100percentTransparent);
+    display: none;
+    width: 27rem;
+    height: 18rem;
+  }
+  75% {
+    background: var(--pureWhite);
+    display: flex;
+    width: 31rem;
+    height: 20rem;
+  }
+  100% {
+    background: var(--pureWhite);
+    display: flex;
+    width: var(--modalOriginalSize);
+    height: auto;
+  }
+}

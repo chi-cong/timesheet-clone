@@ -1,0 +1,10 @@
+<div
+  class="non-extendable-panel"
+  *ngIf="!extendable"
+  [class.curr-route]="navigationTarget === currRoute"
+  (click)="navigate()"
+>
+  <mat-icon>{{ iconName }}</mat-icon>
+  <div>{{ content }}</div>
+</div>
+<div class="extendable-panel" *ngIf="extendable"></div>

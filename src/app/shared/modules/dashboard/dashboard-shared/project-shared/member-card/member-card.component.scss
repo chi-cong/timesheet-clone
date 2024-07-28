@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+img {
+  width: 3.75rem;
+  border-radius: var(--circleBorder);
+}
+.member-info {
+  h4 {
+    margin: 0;
+  }
+}

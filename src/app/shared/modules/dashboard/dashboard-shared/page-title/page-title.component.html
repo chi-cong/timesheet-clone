@@ -1,0 +1,10 @@
+<h3 class="page-name">{{ pageName }}</h3>
+<button *ngIf="hasMenu" mat-icon-button [matMenuTriggerFor]="matTitleMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #matTitleMenu>
+  <button mat-menu-item (click)="refresh()">
+    <mat-icon>refresh</mat-icon>
+    <span>Refresh</span>
+  </button>
+</mat-menu>

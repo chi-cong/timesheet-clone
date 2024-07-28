@@ -1,0 +1,23 @@
+:host {
+  width: 100%;
+}
+.sec-code {
+  width: 100%;
+  .suffix-container {
+    display: flex;
+    gap: 0.25rem;
+    width: 3.25rem;
+    button {
+      mat-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.5rem;
+      }
+    }
+    mat-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}

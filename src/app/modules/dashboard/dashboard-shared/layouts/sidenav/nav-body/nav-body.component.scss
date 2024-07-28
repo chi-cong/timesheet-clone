@@ -1,0 +1,7 @@
+.navigator-list {
+  padding: 0;
+  margin: 0;
+  width: var(--sidebarWidth);
+  height: calc(100vh - var(--toolbarHeight) - 5.375rem - 4.625rem);
+  background: var(--pureWhite);
+}

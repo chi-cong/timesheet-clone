@@ -1,0 +1,15 @@
+<div class="form-warpper" [formGroup]="fg">
+  <mat-form-field [appearance]="appearance">
+    <mat-label *ngIf="label">{{ label }}</mat-label>
+    <mat-select
+      [(value)]="selectedValue"
+      [compareWith]="compareItems"
+      (selectionChange)="onChange($event)"
+      [formControlName]="controlName"
+    >
+      <mat-option *ngFor="let option of itemList" [value]="option.value">{{
+        option.viewValue
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

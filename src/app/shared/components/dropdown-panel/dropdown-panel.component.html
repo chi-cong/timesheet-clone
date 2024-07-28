@@ -1,0 +1,15 @@
+<button mat-raised-button [matMenuTriggerFor]="menu">
+  <mat-icon *ngIf="btnContent.prefixIcon">{{ btnContent.prefixIcon }}</mat-icon>
+  {{ btnContent.text }}
+  <mat-icon *ngIf="btnContent.suffixIcon">{{ btnContent.suffixIcon }}</mat-icon>
+</button>
+<mat-menu #menu>
+  <button
+    mat-menu-item
+    *ngFor="let item of itemContentList"
+    (click)="menuItemOnClick(item.text)"
+  >
+    <mat-icon>{{ item.prefixIcon }}</mat-icon>
+    {{ item.text }}
+  </button>
+</mat-menu>

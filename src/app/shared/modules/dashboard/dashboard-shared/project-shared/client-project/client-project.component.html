@@ -1,0 +1,17 @@
+<div class="project-info">
+  <p class="project-name">{{ name }}</p>
+  <mat-chip-list [selectable]="false">
+    <app-chip [content]="pms.toString()" [color]="'primary'"></app-chip>
+    <app-chip
+      [content]="activeMember + ' members'"
+      [color]="'accent'"
+    ></app-chip>
+    <app-chip [content]="type" [color]="'warn'"></app-chip>
+    <app-chip [content]="startDate + '-' + (endDate ? endDate : '')"></app-chip>
+  </mat-chip-list>
+</div>
+<app-dropdown-panel
+  [btnContent]="dropdownBtnContent"
+  [itemContentList]="dropdownItems"
+  (menuItemEvent)="itemClickHandle($event)"
+></app-dropdown-panel>

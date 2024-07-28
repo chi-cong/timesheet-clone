@@ -1,0 +1,10 @@
+<app-error-modal
+  [errTitle]="'Login failed!'"
+  [errContent]="'Invalid username or password'"
+  *ngIf="showingErrModal"
+></app-error-modal>
+<div>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

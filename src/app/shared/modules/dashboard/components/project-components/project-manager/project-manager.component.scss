@@ -1,0 +1,25 @@
+.client-project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .client-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .client-name {
+      width: 100%;
+      border-radius: var(--roundedAngleBorder);
+      background: var(--lightGray);
+      color: var(--lightBlack);
+      padding: var(--padding1);
+      box-sizing: border-box;
+      text-align: left;
+    }
+  }
+}
+mat-spinner {
+  margin: auto;
+}

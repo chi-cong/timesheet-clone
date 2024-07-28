@@ -1,0 +1,30 @@
+<button
+  mat-icon-button
+  (click)="iconClick()"
+  *ngIf="prefixIcon"
+  class="prefix-btn"
+>
+  <mat-icon>{{ prefixIcon }}</mat-icon>
+</button>
+<img
+  src="{{ imgSrc }}"
+  onerror="this.src= '../../../../../../assets/img/user.png'"
+/>
+<div class="member-info" (click)="itemClick()">
+  <div class="member-info-row">
+    <h4>{{ name }}</h4>
+    <app-chip
+      *ngIf="userType"
+      [content]="userType"
+      [color]="'primary'"
+    ></app-chip>
+    <app-chip *ngIf="userLvl" [content]="userLvl" [color]="'warn'"></app-chip>
+  </div>
+  <div class="member-info-row">
+    {{ email }}
+  </div>
+</div>
+<app-select-box
+  *ngIf="positions.length"
+  [itemList]="positions"
+></app-select-box>

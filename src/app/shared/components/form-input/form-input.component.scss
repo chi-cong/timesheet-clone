@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: var(--gap1);
+}
+.mat-icon {
+  width: 10%;
+}
+.form-field {
+  width: 90%;
+  .mat-form-field {
+    text-transform: capitalize;
+    width: 100%;
+  }
+}
+.noIconInput{
+  width: 100%;
+}

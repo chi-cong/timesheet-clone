@@ -1,0 +1,39 @@
+.screen-width-listener {
+  width: 0;
+  height: 0;
+}
+.overlay {
+  display: none;
+}
+.page-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: var(--dashboardGroundWidth);
+  padding: 2%;
+  box-sizing: border-box;
+  right: 0;
+  background-color: var(--lightGray);
+}
+
+/*the style below must be written in pure css */
+/*or it won't work in others files that import this file*/
+.page-section .content-section {
+  width: 100%;
+  height: 90%;
+  text-align: center;
+  background-color: var(--pureWhite);
+  padding: var(--padding1);
+  box-sizing: border-box;
+  box-shadow: var(--lightShadowBox);
+}
+
+@media screen and (max-width: 1170px) {
+  .overlay {
+    display: block;
+  }
+  .page-section {
+    width: 100vw;
+  }
+}

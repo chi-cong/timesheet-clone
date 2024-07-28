@@ -1,0 +1,13 @@
+<div class="sidenav-container" [class.hide]="!isOpened">
+  <app-nav-header
+    [avatarPath]="sessionRespResult.user.avatarFullPath"
+    [name]="sessionRespResult.user.name"
+    [surname]="sessionRespResult.user.surname"
+    [email]="sessionRespResult.user.emailAddress"
+  ></app-nav-header>
+  <app-nav-body></app-nav-body>
+  <app-nav-footer
+    [version]="sessionRespResult.application.version"
+  ></app-nav-footer>
+</div>
+<div class="sidenav-placeholder"></div>

@@ -1,0 +1,11 @@
+<div class="form-group-wrapper" [formGroup]="fg">
+  <mat-button-toggle-group
+    [formControlName]="controlName"
+    [multiple]="isMultiple"
+    (change)="onChange($event)"
+  >
+    <mat-button-toggle *ngFor="let btn of btnList" [value]="btn.value">{{
+      btn.viewValue
+    }}</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

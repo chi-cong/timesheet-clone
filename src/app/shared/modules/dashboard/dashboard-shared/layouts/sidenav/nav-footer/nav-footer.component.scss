@@ -1,0 +1,25 @@
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap1);
+  height: 4.625rem;
+  width: var(--sidebarWidth);
+  background: var(--pureWhite);
+  font-size: var(--smallFontSize2);
+  box-sizing: border-box;
+  padding: var(--padding1);
+  .first-row {
+    margin: 0;
+    span {
+      font-weight: var(--titleFontWeight);
+      color: var(--red500);
+    }
+  }
+  .second-row {
+    margin: 0;
+    span {
+      font-weight: var(--titleFontWeight);
+    }
+  }
+}
